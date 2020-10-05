@@ -8,12 +8,10 @@
     --text-color : #333333;
 } */
 section{
-    /* background-color: #dfe6e9; */
     background-color: #f6f6f6;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    position: relative;
     align-items: center;
     height: 82vh;
     width: 75%;
@@ -33,7 +31,6 @@ section{
     font-size: 1.2rem;
     font-weight: 500;
     margin-left: 25px;
-    /* margin-top: -0px; */
 }
 
 a{
@@ -52,14 +49,19 @@ a:hover{
 
 .icons{
     display: flex;
+    
+}
+
+.loop{
+    display: flex;
 }
 
 .span{
     background-color: white;
-    position: absolute;
-    top: 53%;
-    left: -2%;
-    transform: translate(-53%,2%);
+    position: relative;
+    top: 5%;
+    left: 45%;
+    transform: translate(-50%,0%);
     height: 144px;
     width: 144px;
     margin-left: 30px;
@@ -67,53 +69,27 @@ a:hover{
     padding-top: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation: move 15s linear infinite;
 }
-
-.one{ animation: move 30s infinite;}
-.two{ animation: move 30s 1s infinite;}
-.three{ animation: move 30s 2s infinite;}
-.four{ animation: move 30s 3s infinite;}
-.five{ animation: move 30s 4s infinite;}
-.six{ animation: move 30s 5s infinite;}
-.seven{ animation: move 30s 6s infinite;}
-.eight{ animation: move 30s 7s infinite;}
 
 img{
     width: 120px;
     height: 120px;
 }
 
-@keyframes move {
+@keyframes move{
     0%{
-        top: 53%;
-        left: -25%;
-        transform: translate(-50%,25%);
-    }
-    97%{
-        top: 53%;
-        left: 190%;
-        transform: translate(-53%,0%);
-    }
-    98%{
-        top: 53%;
-        left: 300%;
-        transform: translate(-53%,0%);
-        opacity: 0;
-    }
-    99%{
-        top: 53%;
-        left: -25%;
-        transform: translate(-53%,25%);
-        opacity: 0;
+        top: 5%;
+        left: -55%;
+        transform: translate(-50%,0%);
     }
     100%{
-        top: 53%;
-        left: -25%;
-        transform: translate(-53%,25%);
-        opacity: 1;
+        top: 5%;
+        left: 45%;
+        transform: translate(-50%,0%);
     }
 }
-
+   
 @media screen and (max-width: 1300px){
     section{
         width: 95%;
